@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -6,10 +6,68 @@
     <title>BlazorPlay</title>
     <base href="/" />
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/4c00cc5755.js" crossorigin="anonymous"></script>
     <link href="css/site.css" rel="stylesheet" />
+
 </head>
 <body>
-    <app>Loading...</app>
+    <app>
+        <style>
+            /* This CSS is specific to the current HTML.
+            Note that this snippet only contains the necessary changes and not the full Blazor app template */
+            .loading-section {
+                text-align: center;
+                height: 80vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+            }
+
+                .loading-section h2 {
+                    color: #00b5dc;
+                }
+
+            .loader-dot {
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                background-color: #00b5dc;
+                display: inline-block;
+                -webkit-animation: grow 2.1s infinite ease-in-out both;
+                animation: grow 2.1s infinite ease-in-out both;
+            }
+
+                .loader-dot.dot1 {
+                    -webkit-animation-delay: -0.96s;
+                    animation-delay: -0.96s;
+                }
+
+                .loader-dot.dot2 {
+                    -webkit-animation-delay: -0.48s;
+                    animation-delay: -0.48s;
+                }
+
+            @-webkit-keyframes grow {
+                0%, 80%, 100% {
+                    -webkit-transform: scale(0)
+                }
+
+                40% {
+                    -webkit-transform: scale(1.0)
+                }
+            }
+        </style>
+            <div class="loading-section">
+                <h2>Blazor Play Loading</h2>
+                <div class="short-description">Loading all the Blazor goodness!</div>
+                <div class="loader mt-5">
+                    <div class="loader-dot dot1"></div>
+                    <div class="loader-dot dot2"></div>
+                    <div class="loader-dot dot3"></div>
+                </div>
+            </div>
+    </app>
 
     <script src="_framework/blazor.webassembly.js"></script>
 </body>
