@@ -1,0 +1,54 @@
+﻿@page "/people"
+@using BlazorPlay.Shared
+@using BlazorPlay.Client.Components
+
+@inject HttpClient http
+
+<h3>People</h3>
+
+@if (people == null)
+{
+    if (isLoading)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <button class="btn btn-info" @onclick="@LoadPeople">Load People</button>
+    }
+}
+else
+{
+    <div class="row">
+        @foreach(var person in people)
+        {
+            <PersonCard Person="@person"></PersonCard>
+        }
+    </div>
+}
+
+@code {
+    private List<Person> people;
+    private bool isLoading = false;
+
+    private void BuyNow(Person person)
+    {
+        person.AccountBalance -= 5.15M;
+    }
+
+    private async Task SaveUser(Person person)
+    {
+        await http.PostJsonAsync("person", person);
+    }
+
+
+    private async Task LoadPeople()
+    {
+        isLoading = true;
+        //await Task.Delay(2000);
+        people = await http.GetJsonAsync<List<Person>>("person/all");
+
+        isLoading = false;
+    }
+
+}

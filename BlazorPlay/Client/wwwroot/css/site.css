@@ -133,3 +133,7 @@ app {
         display: block;
     }
 }
+
+.input-group-text > .fa{
+    width: 14px;
+}

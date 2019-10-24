@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29411.138
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorPlay.Server", "BlazorPlay\Server\BlazorPlay.Server.csproj", "{F8592741-B164-4E18-8F5A-1E120ECFE3E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorPlay.Server", "BlazorPlay\Server\BlazorPlay.Server.csproj", "{F8592741-B164-4E18-8F5A-1E120ECFE3E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorPlay.Client", "BlazorPlay\Client\BlazorPlay.Client.csproj", "{62C87B6A-9CDC-4D31-9EB2-EF77197F9D35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorPlay.Client", "BlazorPlay\Client\BlazorPlay.Client.csproj", "{62C87B6A-9CDC-4D31-9EB2-EF77197F9D35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorPlay.Shared", "BlazorPlay\Shared\BlazorPlay.Shared.csproj", "{F6E8051F-3CC6-4391-B1E6-4574FB6D97F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorPlay.Shared", "BlazorPlay\Shared\BlazorPlay.Shared.csproj", "{F6E8051F-3CC6-4391-B1E6-4574FB6D97F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
