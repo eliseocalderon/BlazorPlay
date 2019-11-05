@@ -33,7 +33,7 @@ namespace BlazorPlay.Server.Controllers
         }
 
         [HttpPost]
-        public async Task Post(Person person)
+        public void Post(Person person)
         {
             Console.WriteLine(person.FullName);
         }
